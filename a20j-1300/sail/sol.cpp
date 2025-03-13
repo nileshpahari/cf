@@ -21,9 +21,9 @@ int main() {
     wReq = abs(x);
   }
   if (y >= 0) {
-    nReq = x;
+    nReq = y;
   } else {
-    sReq = abs(x);
+    sReq = abs(y);
   }
 
   while ((t--) && (eReq != 0 || wReq != 0 || nReq != 0 || sReq != 0)) {
@@ -36,13 +36,12 @@ int main() {
     } else if (dir == 'E' && eReq > 0) {
       eReq--;
     } else if (dir == 'W' && wReq > 0) {
-      wReq++;
+      wReq--;
     }
     tReq++;
   }
   if (eReq != 0 || wReq != 0 || nReq != 0 || sReq != 0) {
     cout << -1;
-    cout << 
   } else
     cout << tReq;
   return 0;
